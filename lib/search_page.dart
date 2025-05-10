@@ -8,39 +8,26 @@ class SearchPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Search'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Container(
-          // Menggunakan Container untuk membuat area search bar
-          decoration: BoxDecoration(
-            color: Colors.white, // Warna background search bar
-            borderRadius: BorderRadius.circular(24.0), // Rounded corners
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withOpacity(0.3), // Warna shadow
-                spreadRadius: 1,
-                blurRadius: 5,
-                offset: const Offset(0, 3), // Pergeseran shadow (x, y)
-              ),
-            ],
-          ),
-          child: const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Row(
-              children: [
-                Icon(Icons.search, color: Colors.grey), // Ikon search
-                SizedBox(width: 8.0), // Spasi antara ikon dan teks
-                Expanded(
-                  child: Text(
-                    'Search...', // Teks placeholder
-                    style: TextStyle(color: Colors.grey),
-                  ),
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(56.0),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: 'Search...',
+                prefixIcon: const Icon(Icons.search),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(24.0),
                 ),
-              ],
+                filled: true, // Fill the background color
+                fillColor: Colors.white, // Background color of the search bar
+              ),
             ),
           ),
         ),
+      ),
+      body: const Center(
+        child: Text('Search Page'),
       ),
     );
   }
