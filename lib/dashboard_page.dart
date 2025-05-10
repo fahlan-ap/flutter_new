@@ -29,7 +29,7 @@ class _DashboardPageState extends State<DashboardPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Ensiklopedia Jamur'),
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: const Color.fromARGB(255, 145, 99, 224),
       ),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -39,7 +39,7 @@ class _DashboardPageState extends State<DashboardPage> {
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profil'),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.deepPurple,
+        selectedItemColor: const Color.fromARGB(255, 93, 0, 255),
         onTap: _onItemTapped,
       ),
     );
