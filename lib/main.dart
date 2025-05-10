@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const LoginPage(), // Tetap menampilkan LoginPage sebagai halaman awal
+      home: const LoginPage(),
     );
   }
 }
